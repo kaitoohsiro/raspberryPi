@@ -40,7 +40,7 @@ def read_distance():
         sig_on = time.time()
 
     duration = sig_on - sig_off             #GPIO23がHighしている時間を演算
-    distance = duration * 34000 / 2         #距離を求める(cm)
+    distance = duration * 34000 / 2         #音速34000cm/s * 計測時間に計測距離が往復だから2で割る
     return distance
 
 #連続して値を超音波センサの状態を読み取る
